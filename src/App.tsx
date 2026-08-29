@@ -238,7 +238,7 @@ export function App() {
               Click the "Execute Analysis" button to run the Luau VM static analysis and intermediate representation pipeline.
             </p>
             <button
-              onClick={handleRunAnalysis}
+              onClick={() => handleRunAnalysis()}
               className="flex items-center gap-2 px-4 py-2 rounded-lg bg-cyan-600 hover:bg-cyan-500 text-white text-xs font-semibold font-mono"
             >
               <Play className="w-3.5 h-3.5 fill-current" />
@@ -247,8 +247,32 @@ export function App() {
           </div>
         )}
       </main>
+
+      {/* Production & Deployment Status Bar */}
+      <footer className="border-t border-slate-900 bg-slate-950/80 px-4 py-2.5 text-xs text-slate-500 font-mono flex flex-wrap items-center justify-between gap-2">
+        <div className="flex items-center gap-3">
+          <div className="flex items-center gap-1.5 text-slate-300">
+            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+            <span className="font-semibold text-white">Luau VM Static Analyzer</span>
+          </div>
+          <span className="text-slate-700">|</span>
+          <div className="flex items-center gap-1.5 text-emerald-400 font-medium">
+            <span>Status:</span>
+            <span className="px-1.5 py-0.5 rounded bg-emerald-500/10 text-emerald-300 border border-emerald-500/30">
+              Ready
+            </span>
+          </div>
+        </div>
+
+        <div className="flex items-center gap-4 text-[11px] text-slate-500">
+          <span>Target: GitHub Pages / Client-Side SPA</span>
+          <span>Base: <code className="text-slate-400">/VM-detected/</code></span>
+          <span>Engine: <span className="text-cyan-400">Luau AST v2.5</span></span>
+        </div>
+      </footer>
     </div>
   );
 }
 
 export default App;
+
