@@ -1,0 +1,6 @@
+{
+  "name": "Luau VM Static Analyzer & Deobfuscation Engine",
+  "description": "Advanced static analysis and reverse-engineering engine for heavily virtualized Roblox Luau scripts, featuring AST parsing, CFG/DFG analysis, state machine reconstruction, and semantic opcode decompilation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
